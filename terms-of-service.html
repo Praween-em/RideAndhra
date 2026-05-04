@@ -2,237 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms and Services | Ride Andhra</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Ride Andhra Captain – Terms & Conditions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      background: #ffffff;
-    }
-
-    .header {
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      color: #2563eb;
-      margin-bottom: 0.5rem;
-    }
-
-    .effective-date {
-      color: #64748b;
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      color: #1e40af;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .important {
-      background-color: #fff7ed;
-      border-left: 4px solid #f97316;
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0;
-      border-radius: 0 4px 4px 0;
-    }
-
-    .important h2 {
-      color: #ea580c;
-      border-bottom: none;
-    }
-
-    p, li {
-      font-size: 1rem;
-      color: #334155;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      padding: 0.5rem 0;
-    }
-
-    .contact-info {
-      background-color: #f1f5f9;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-top: 1.5rem;
-    }
-
-    .note {
-      font-style: italic;
-      color: #64748b;
-      margin-top: 0.5rem;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f0f4f9; font-family: 'Inter', sans-serif; color: #0f172a; line-height: 1.55; padding: 2rem 1rem; }
+    .main-container { max-width: 1100px; margin: 0 auto; background: #ffffff; border-radius: 2rem; box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2); overflow: hidden; }
+    .brand-header { background: linear-gradient(105deg, #0f2b3d 0%, #1e4a76 100%); padding: 2rem 2rem 1.5rem 2rem; color: white; }
+    .brand-header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 0.3rem; }
+    .brand-header .tag { font-size: 0.95rem; opacity: 0.85; font-weight: 400; border-left: 3px solid #38bdf8; padding-left: 0.8rem; margin-top: 0.3rem; }
+    .last-updated-banner { background: #eef2ff; padding: 0.6rem 2rem; font-size: 0.85rem; font-weight: 500; color: #1e3a8a; border-bottom: 1px solid #dce3f0; }
+    .content-padding { padding: 2rem 2rem 2.2rem 2rem; }
+    .section-title { font-size: 1.7rem; font-weight: 700; background: linear-gradient(135deg, #0f2c3f, #1e5a9e); background-clip: text; -webkit-background-clip: text; color: transparent; margin: 0 0 0.25rem 0; display: inline-block; }
+    .section-sub { font-size: 0.9rem; color: #475569; margin-bottom: 1.8rem; border-left: 3px solid #2563eb; padding-left: 1rem; }
+    h2 { font-size: 1.4rem; font-weight: 600; color: #0c4a6e; margin: 1.8rem 0 0.8rem 0; padding-bottom: 0.3rem; border-bottom: 2px solid #e2edf7; }
+    p { font-size: 0.98rem; color: #1e293b; margin-bottom: 0.85rem; line-height: 1.6; }
+    ul { margin: 0.7rem 0 1rem 1.3rem; }
+    li { margin-bottom: 0.45rem; font-size: 0.96rem; color: #1f2a44; }
+    .highlight { background: #e6f0ff; font-weight: 600; color: #1e4a76; padding: 0.1rem 0.3rem; border-radius: 8px; font-size: 0.9rem; }
+    .info-card { background: #f0f9ff; border-radius: 20px; padding: 1.2rem 1.5rem; margin: 1.4rem 0; border: 1px solid #cff2fe; }
+    .contact-block { background: #f1f5f9; border-radius: 20px; padding: 1.3rem 1.6rem; margin: 1.8rem 0 0.5rem 0; }
+    .badge { display: inline-block; background: #2563eb10; color: #1e40af; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.7rem; border-radius: 40px; border: 0.5px solid #b9d0f0; margin-right: 0.5rem; }
+    .footer-note { background: #fafcff; text-align: center; font-size: 0.75rem; color: #4b5563; border-top: 1px solid #e2edf2; padding: 1.2rem; }
+    @media (max-width: 680px) { body { padding: 1rem; } .content-padding { padding: 1.3rem; } .brand-header h1 { font-size: 1.6rem; } }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <a href="index.html" class="back-link">← Back to Ride Andhra</a>
-
-    <div class="header">
-      <h1>Ride Andhra — Terms and Services</h1>
-      <p class="effective-date">Effective Date: January 8, 2026</p>
-      <p>These Terms and Services ("Terms") govern your access to and use of the Ride Andhra mobile application and related services ("App", "Service", "we", "us", "our"). By downloading, accessing, or using the Ride Andhra App, you agree to be bound by these Terms. If you do not agree, please do not use the App.</p>
-    </div>
-
-    <div class="important">
-      <h2>1. Nature of the Service (Very Important)</h2>
-      <p>Ride Andhra is an information and connectivity platform only.</p>
-      <p>The App provides ride-related information such as:</p>
-      <ul>
-        <li>Pickup and drop-off based route details</li>
-        <li>Distance-based estimated fares</li>
-        <li>Availability or contact information of drivers (where applicable)</li>
-      </ul>
-      <p>Ride Andhra does not provide transportation services.</p>
-      <p>Ride Andhra does not own vehicles, employ drivers, or control drivers.</p>
-      <p>Ride Andhra does not process payments, collect fares, hold money, provide wallets, or support in-app transactions.</p>
-      <p><strong>Any ride, agreement, payment, or dispute is strictly between the user (rider) and the driver, outside the App.</strong></p>
-    </div>
-
-    <h2>2. Eligibility to Use the App</h2>
-    <p>To use Ride Andhra:</p>
-    <ul>
-      <li>You must be at least 18 years of age</li>
-      <li>You must have the legal capacity to enter into a contract</li>
-      <li>You must comply with all applicable local, state, and national laws</li>
-    </ul>
-
-    <h2>3. User Information and Data Usage</h2>
-    <p>We do not collect or store user photos, identity documents, or biometric data.</p>
-    <p>We collect only:</p>
-    <ul>
-      <li>Name (if provided)</li>
-      <li>Pickup and drop-off locations selected by the user</li>
-      <li>Basic technical and usage data for app functionality</li>
-    </ul>
-    <p>Location data is used only to calculate routes and estimated fares.</p>
-    <p>Full details are explained in our Privacy Policy, which forms part of these Terms.</p>
-
-    <h2>4. Estimated Fares Disclaimer</h2>
-    <p>All fare values shown in the App are estimates only.</p>
-    <p>Estimated fares are calculated based on distance, route data, and internal logic.</p>
-    <p>Final fares may differ due to traffic, route changes, waiting time, negotiation, or driver discretion.</p>
-    <p><strong>Ride Andhra does not guarantee accuracy of estimated fares and is not responsible for fare disputes.</strong></p>
-
-    <h2>5. No Payments, No Wallets, No Referrals</h2>
-    <p>Ride Andhra explicitly states that:</p>
-    <ul>
-      <li>No payments are collected through the App</li>
-      <li>No wallets, credits, or balances are maintained</li>
-      <li>No referral rewards, commissions, or cashback systems exist</li>
-      <li>Ride Andhra does not charge riders per trip through the App</li>
-    </ul>
-    <p>If any payment occurs, it happens directly between rider and driver, independent of Ride Andhra.</p>
-
-    <h2>6. User Responsibilities</h2>
-    <p>By using the App, you agree:</p>
-    <ul>
-      <li>To provide accurate pickup and drop-off information</li>
-      <li>To communicate respectfully with drivers</li>
-      <li>Not to misuse the App for unlawful, fraudulent, or harmful purposes</li>
-      <li>Not to impersonate another person or provide false information</li>
-      <li>Not to attempt to reverse engineer, hack, or disrupt the App</li>
-    </ul>
-
-    <h2>7. Driver Relationship Disclaimer</h2>
-    <p>Drivers listed or contacted via the App are independent third parties.</p>
-    <p>Ride Andhra does not supervise, manage, or guarantee driver behavior.</p>
-    <p>Ride Andhra is not liable for:</p>
-    <ul>
-      <li>Driver conduct</li>
-      <li>Ride quality</li>
-      <li>Accidents, delays, cancellations, or disputes</li>
-    </ul>
-    <p>Users are advised to exercise personal judgment and caution.</p>
-
-    <h2>8. Limitation of Liability</h2>
-    <p>To the maximum extent permitted by law:</p>
-    <ul>
-      <li>Ride Andhra shall not be liable for any indirect, incidental, consequential, or special damages.</li>
-      <li>Ride Andhra is not responsible for losses arising from:
-        <ul>
-          <li>Use or inability to use the App</li>
-          <li>Reliance on estimated fares</li>
-          <li>Interactions with drivers</li>
-          <li>Third-party services or maps</li>
-        </ul>
-      </li>
-    </ul>
-    <p><strong>Use of the App is at your own risk.</strong></p>
-
-    <h2>9. Suspension or Termination</h2>
-    <p>We reserve the right to:</p>
-    <p>Suspend or terminate access to the App without notice if:</p>
-    <ul>
-      <li>These Terms are violated</li>
-      <li>The App is misused</li>
-      <li>Required by law or regulatory authorities</li>
-    </ul>
-
-    <h2>10. Intellectual Property</h2>
-    <p>All content, branding, logos, and software related to Ride Andhra are owned by Ride Andhra or its licensors.</p>
-    <p>Users may not copy, modify, distribute, or exploit any part of the App without written permission.</p>
-
-    <h2>11. Changes to Terms</h2>
-    <p>We may update these Terms from time to time.</p>
-    <p>Continued use of the App after changes indicates acceptance of the updated Terms.</p>
-    <p>The effective date will always be shown at the top of this page.</p>
-
-    <h2>12. Governing Law and Jurisdiction</h2>
-    <p>These Terms shall be governed by the laws of India.</p>
-    <p>Any disputes shall be subject to the exclusive jurisdiction of the courts located in Andhra Pradesh, India.</p>
-
-    <h2>13. Contact Information</h2>
-    <div class="contact-info">
-      <p>For support, questions, or complaints:</p>
-      <p><strong>Email:</strong> help.rideandhra@gmail.com</p>
-      <p><strong>Customer Care:</strong> +91 83749 50475</p>
-    </div>
-
-    <p class="note">Last updated: January 8, 2026</p>
+<div class="main-container">
+  <div class="brand-header">
+    <h1>Ride Andhra <span style="font-weight: 500;">Captain</span></h1>
+    <div class="tag">Driver Partner – Terms & Conditions</div>
   </div>
+  <div class="last-updated-banner">📅 Last Revised: <strong>May 05, 2026</strong></div>
+
+  <div class="content-padding">
+    <div class="terms-section">
+      <span class="section-title">Terms & Conditions</span>
+      <div class="section-sub">Captain agreement – rights, duties, and operational rules</div>
+
+      <h2>1. The Agreement</h2>
+      <p>By registering as a Captain on Ride Andhra, you agree to these Terms. You represent that you are at least 18 years old and possess a valid driving license (commercial or adapted as per Motor Vehicles Act, 1988).</p>
+
+      <h2>2. Driver Obligations</h2>
+      <ul>
+        <li><span class="highlight">Accuracy:</span> Provide true and current documents (Driver’s License, RC, Insurance, Pollution under control). Any fraudulent documentation leads to immediate termination and possible legal proceedings.</li>
+        <li><span class="highlight">Safety & maintenance:</span> Keep the vehicle roadworthy, follow traffic rules, and ensure valid third-party insurance.</li>
+        <li><span class="highlight">Professionalism:</span> Maintain respectful behaviour, avoid cancellations after accepting rides, and aim for high ratings. Persistent low ratings may result in account review or suspension.</li>
+      </ul>
+
+      <h2>3. Financial Terms</h2>
+      <ul>
+        <li><span class="highlight">Platform Fees:</span> A transparent platform fee (plus applicable GST) is deducted per completed ride. The exact fee is shown before trip acceptance.</li>
+        <li><span class="highlight">Subscription Plans:</span> Daily, Weekly, or Monthly zero-commission plans are available – the subscription fee is <strong>non-refundable</strong> and offers benefits during the chosen period.</li>
+        <li><span class="highlight">Payouts:</span> Earnings are settled through Razorpay (or equivalent) to your linked bank account as per schedule (typically weekly, with T+3 settlement).</li>
+        <li><span class="highlight">Tax Responsibility:</span> You are solely responsible for individual income tax, GST registration (if applicable based on turnover), and any other statutory dues. Ride Andhra may issue tax invoices and deduct TDS where mandated.</li>
+      </ul>
+
+      <h2>4. Location Tracking & Consent</h2>
+      <p>You acknowledge that enabling location services while "Online" is a condition for using the platform. Ride Andhra uses background location to assign nearby rides, monitor trip progress and prevent misuse. Disabling location during online mode will log you out automatically.</p>
+
+      <h2>5. Code of Conduct & Prohibitions</h2>
+      <ul>
+        <li><strong>No Off-app transactions:</strong> Soliciting or accepting rides outside the Ride Andhra app is strictly prohibited and will result in permanent deactivation and forfeiture of outstanding earnings.</li>
+        <li><strong>Account integrity:</strong> Never share your Captain account with any other individual. Multi-usage leads to suspension.</li>
+        <li><strong>Zero-tolerance policy:</strong> Harassment, discrimination, driving under influence, unsafe manoeuvres, or any illegal activity leads to immediate termination.</li>
+        <li><strong>Manipulation:</strong> Fake trips, artificial distance inflation, or collusion with riders to evade fees will trigger legal action and recovery of damages.</li>
+      </ul>
+
+      <h2>6. Termination & Suspension</h2>
+      <p>Ride Andhra may suspend or terminate access if you materially breach these Terms, pose a safety threat, engage in fraud, or receive multiple critical safety complaints. You may deactivate your account voluntarily via support. Upon termination, you must uninstall the app and cease use of all Captain services.</p>
+
+      <h2>7. Governing Law & Jurisdiction</h2>
+      <p>These Terms are governed by the laws of India. Any dispute arising out of or relating to these Terms shall be subject to the <strong>exclusive jurisdiction of the courts in Kadapa, Andhra Pradesh</strong>.</p>
+
+      <div class="info-card">
+        <span class="badge">Captain Advisory</span> <strong>Tax & GST notice:</strong> Ride Andhra does not provide tax evasion strategies. You are encouraged to consult a tax advisor regarding GST on your earnings. The platform may issue monthly statements to assist with your compliance.
+      </div>
+
+      <h2>8. Changes to Terms</h2>
+      <p>We may revise these Terms from time to time. Updated version will be posted in-app and notified via email. Continued use after material changes constitutes acceptance.</p>
+      
+      <div class="contact-block">
+        <strong>📞 Captain Support & Data Privacy Requests</strong><br>
+        Email: <span class="highlight">help.rideandhra@gmail.com</span><br>
+        Customer Care: <span class="highlight">+91 83749 50475</span><br>
+        Grievance Officer: Mr. S. Reddy, grievance.rideandhra@gmail.com<br>
+        Office: Ride Andhra Operations, Kadapa, AP – 516001
+      </div>
+
+      <div style="background: #eef4ff; border-radius: 1.5rem; padding: 1.2rem 1.8rem; margin: 2rem 0 0.5rem 0; border: 1px solid #cddff5;">
+        <span style="font-weight: 800; background: #1e3a8a; color: white; padding: 0.2rem 0.9rem; border-radius: 50px; font-size: 0.75rem;">Acknowledgment</span>
+        <p style="margin-top: 0.7rem; font-size: 0.9rem; font-weight: 500;">✅ By using the Ride Andhra Captain app, you confirm that you have read, understood, and agreed to these Terms & Conditions. You specifically consent to background location collection while online.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-note">
+    © 2026 Ride Andhra — Captain Platform. All rights reserved.
+  </div>
+</div>
 
 </body>
 </html>

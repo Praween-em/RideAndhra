@@ -50,6 +50,13 @@
                     <a href="#rewards">Super Rewards</a>
                     <a href="driver-partners.html">Drive with Us</a>
                     <a href="contact-us.html">Contact</a>
+                    
+                    <div class="mobile-ctas">
+                        <a href="https://play.google.com/store/apps/details?id=com.rideandhra.rider"
+                            class="btn btn-secondary">Rider App</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.rideandhra.driverapp"
+                            class="btn btn-primary">Driver App</a>
+                    </div>
                 </div>
                 <div class="cta-group">
                     <a href="https://play.google.com/store/apps/details?id=com.rideandhra.rider"
@@ -57,6 +64,9 @@
                     <a href="https://play.google.com/store/apps/details?id=com.rideandhra.driverapp"
                         class="btn btn-primary">Driver App</a>
                 </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
@@ -114,13 +124,12 @@
                     <p>Fast, reliable, and affordable transportation at your fingertips. From daily commutes to parcel
                         deliveries, we've got you covered.</p>
 
-                    <div class="hero-cta" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                    <div class="hero-cta">
                         <a href="https://play.google.com/store/apps/details?id=com.rideandhra.rider" target="_blank">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                alt="Rider Play Store" style="height: 60px;">
+                                alt="Rider Play Store" class="store-badge">
                         </a>
-                        <div
-                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; width: 100%; max-width: 600px;">
+                        <div class="trust-pillars">
                             <div class="trust-pillar"><i class="fas fa-shield-alt"></i> Safe Rides</div>
                             <div class="trust-pillar"><i class="fas fa-map-marker-alt"></i> Live Tracking</div>
                             <div class="trust-pillar"><i class="fas fa-wallet"></i> Secure Payments</div>
@@ -189,9 +198,8 @@
         <div class="rewards-section container">
             <div class="rewards-grid">
                 <div class="reward-content">
-                    <h2 style="font-size: 3rem; margin-bottom: 24px;">More Rides.<br><span
-                            style="color: var(--primary-orange)">More Rewards.</span></h2>
-                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px;">Earn Super Coins and track your
+                    <h2 class="section-title">More Rides.<br><span class="highlight">More Rewards.</span></h2>
+                    <p class="section-subtitle">Earn Super Coins and track your
                         Super Kilometers to unlock exclusive discounts and milestones.</p>
                     <div class="reward-item" style="margin-bottom: 32px;">
                         <div class="reward-icon">🪙</div>
@@ -237,8 +245,8 @@
                 </div>
                 <div class="driver-content">
                     <span class="commission-badge">0% COMMISSION</span>
-                    <h2 style="font-size: 3rem; margin-bottom: 24px;">Drive more.<br>Earn more.</h2>
-                    <p style="font-size: 1.2rem; color: var(--gray-600); margin-bottom: 32px;">Tired of giving away 30%
+                    <h2 class="section-title">Drive more.<br>Earn more.</h2>
+                    <p class="section-subtitle">Tired of giving away 30%
                         of your earnings? With Ride Andhra, you keep 100% of what you earn. Just a simple ₹24 daily
                         subscription.</p>
 
@@ -310,6 +318,26 @@
         </div>
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
 </body>
 
 </html>

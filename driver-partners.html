@@ -73,10 +73,16 @@
                     <a href="#benefits">Benefits</a>
                     <a href="#how-it-works">How to Join</a>
                     <a href="contact-us.html">Contact</a>
+                    <div class="mobile-ctas">
+                        <a href="https://play.google.com/store/apps/details?id=com.rideandhra.driverapp" class="btn btn-primary">Download Driver App</a>
+                    </div>
                 </div>
                 <div class="cta-group">
                     <a href="https://play.google.com/store/apps/details?id=com.rideandhra.driverapp" class="btn btn-primary">Download Driver App</a>
                 </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
@@ -87,8 +93,8 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <span class="commission-badge">FOR DRIVER PARTNERS</span>
-                    <h1>Drive more.<br>Earn more.</h1>
-                    <p>Experience the freedom of <strong>0% Commission</strong>. Keep everything you earn from every ride. No hidden fees, just a simple daily subscription.</p>
+                    <h1 class="section-title">Drive more.<br>Earn more.</h1>
+                    <p class="section-subtitle" style="text-align: left; margin-left: 0;">Experience the freedom of <strong>0% Commission</strong>. Keep everything you earn from every ride. No hidden fees, just a simple daily subscription.</p>
                     
                     <div style="background: white; padding: 24px; border-radius: 24px; display: inline-block; box-shadow: var(--shadow); margin-bottom: 32px;">
                         <span style="font-size: 0.9rem; color: var(--gray-600); display: block; margin-bottom: 8px;">Subscription starts at</span>
@@ -114,37 +120,39 @@
                 <p>Stop losing your hard-earned money to high commissions.</p>
             </div>
             
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Other Platforms</th>
-                        <th class="highlight-orange">Ride Andhra</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Commission per ride</td>
-                        <td>Up to 30%</td>
-                        <td class="highlight-orange">0%</td>
-                    </tr>
-                    <tr>
-                        <td>Daily Cost</td>
-                        <td>Variable (High)</td>
-                        <td class="highlight-orange">Flat ₹24</td>
-                    </tr>
-                    <tr>
-                        <td>Earnings Payout</td>
-                        <td>Weekly/Monthly</td>
-                        <td class="highlight-orange">Instant</td>
-                    </tr>
-                    <tr>
-                        <td>Freedom to choose</td>
-                        <td>Restricted</td>
-                        <td class="highlight-orange">Full Freedom</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Other Platforms</th>
+                            <th class="highlight-orange">Ride Andhra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Commission per ride</td>
+                            <td>Up to 30%</td>
+                            <td class="highlight-orange">0%</td>
+                        </tr>
+                        <tr>
+                            <td>Daily Cost</td>
+                            <td>Variable (High)</td>
+                            <td class="highlight-orange">Flat ₹24</td>
+                        </tr>
+                        <tr>
+                            <td>Earnings Payout</td>
+                            <td>Weekly/Monthly</td>
+                            <td class="highlight-orange">Instant</td>
+                        </tr>
+                        <tr>
+                            <td>Freedom to choose</td>
+                            <td>Restricted</td>
+                            <td class="highlight-orange">Full Freedom</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
@@ -244,5 +252,25 @@
         </div>
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
 </body>
 </html>

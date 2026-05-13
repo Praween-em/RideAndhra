@@ -86,11 +86,17 @@
                     <a href="index.html">Home</a>
                     <a href="index.html#services">Services</a>
                     <a href="driver-partners.html">Drivers</a>
-                    <a href="contact-us.html" style="color: var(--primary-blue);">Contact</a>
+                    <a href="contact-us.html">Contact</a>
+                    <div class="mobile-ctas">
+                        <a href="https://play.google.com/store/apps/details?id=com.rideandhra.rider" class="btn btn-outline">Rider App</a>
+                    </div>
                 </div>
                 <div class="cta-group">
                     <a href="https://play.google.com/store/apps/details?id=com.rideandhra.rider" class="btn btn-outline">Rider App</a>
                 </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
@@ -99,8 +105,8 @@
     <section class="hero" style="padding-bottom: 80px;">
         <div class="container">
             <div class="section-header" style="text-align: left; margin-bottom: 0;">
-                <h1 style="font-size: 3.5rem; margin-bottom: 16px;">Get in touch</h1>
-                <p style="font-size: 1.25rem;">We're here to help you with any questions or issues.</p>
+                <h1 class="section-title">Get in touch</h1>
+                <p class="section-subtitle" style="text-align: left; margin-left: 0;">We're here to help you with any questions or issues.</p>
             </div>
             
             <div class="contact-grid">
@@ -144,7 +150,7 @@
                 
                 <div class="contact-form">
                     <form>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-row">
                             <div class="form-group">
                                 <label>Full Name</label>
                                 <input type="text" placeholder="John Doe">
@@ -187,5 +193,25 @@
         </div>
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
 </body>
 </html>

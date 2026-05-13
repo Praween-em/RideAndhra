@@ -1,69 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Help Center | Ride Andhra</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      margin: 0;
-      line-height: 1.7;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 3rem 1.5rem;
-      background: #ffffff;
-    }
-    h1 { color: #2563eb; font-size: 2.4rem; }
-    h2 { margin-top: 2rem; color: #1e40af; }
-    p, li { color: #334155; }
-    ul { padding-left: 1.5rem; }
-    a { color: #2563eb; text-decoration: none; font-weight: 500; }
-    .back { margin-bottom: 1.5rem; display: inline-block; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center | Ride Andhra - Support & FAQs</title>
+    <meta name="description" content="Find answers to your questions about Ride Andhra. Support for booking rides, payments, driver subscriptions, and safety.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .help-search {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+        .search-box {
+            display: flex;
+            gap: 12px;
+            background: var(--gray-50);
+            padding: 8px;
+            border-radius: 16px;
+            border: 2px solid var(--gray-100);
+        }
+        .search-box input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 12px;
+            font-size: 1.1rem;
+        }
+        .search-box input:focus {
+            outline: none;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+        .category-card {
+            background: white;
+            padding: 32px;
+            border-radius: 24px;
+            border: 1px solid var(--gray-100);
+            transition: all 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .category-card:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        .faq-item {
+            background: white;
+            margin-bottom: 16px;
+            border-radius: 16px;
+            border: 1px solid var(--gray-100);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .faq-answer {
+            padding: 0 24px 20px;
+            color: var(--gray-600);
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <a href="index.html" class="back">← Back to Ride Andhra</a>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="b13a5657-6fc7-4340-8ec0-a46b5133f6f5 (1).png" alt="Ride Andhra">
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="driver-partners.html">Drivers</a>
+                    <a href="contact-us.html">Contact Us</a>
+                </div>
+                <div class="cta-group">
+                    <a href="https://play.google.com/store/apps/details?id=com.rideandhra.rider" class="btn btn-secondary">Get Help</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <h1>Help Center</h1>
-    <p>Find answers to common questions about using the Ride Andhra app.</p>
+    <!-- Hero Section -->
+    <section class="hero" style="padding-bottom: 120px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 24px;">How can we help?</h1>
+            <p style="font-size: 1.25rem; color: var(--gray-600); max-width: 600px; margin-left: auto; margin-right: auto;">Search for questions or browse categories below to find the answers you need.</p>
+        </div>
+    </section>
 
-    <h2>Booking a Ride</h2>
-    <ul>
-      <li>Ensure location permission is enabled</li>
-      <li>Select pickup and drop locations correctly</li>
-      <li>Choose your preferred vehicle type</li>
-    </ul>
+    <div class="container">
+        <!-- Search Box -->
+        <div class="help-search">
+            <div class="search-box">
+                <i class="fas fa-search" style="padding: 16px; color: var(--gray-600);"></i>
+                <input type="text" placeholder="Describe your issue...">
+                <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
 
-    <h2>Payments & Fares</h2>
-    <ul>
-      <li>Fares are calculated based on distance and time</li>
-      <li>No hidden charges</li>
-      <li>Payment issues can be reported via Contact Us</li>
-    </ul>
+        <!-- Categories -->
+        <div class="category-grid">
+            <a href="#" class="category-card">
+                <div class="icon-box" style="margin-bottom: 20px;"><i class="fas fa-user"></i></div>
+                <h3>Rider Help</h3>
+                <p>Booking rides, cancellations, and safety guidelines.</p>
+            </a>
+            <a href="#" class="category-card">
+                <div class="icon-box" style="margin-bottom: 20px; color: var(--primary-orange);"><i class="fas fa-steering-wheel"></i></div>
+                <h3>Driver Help</h3>
+                <p>Subscriptions, earnings, and account management.</p>
+            </a>
+            <a href="#" class="category-card">
+                <div class="icon-box" style="margin-bottom: 20px;"><i class="fas fa-credit-card"></i></div>
+                <h3>Payments</h3>
+                <p>Payment methods, receipts, and refund information.</p>
+            </a>
+            <a href="#" class="category-card">
+                <div class="icon-box" style="margin-bottom: 20px;"><i class="fas fa-shield-alt"></i></div>
+                <h3>Safety</h3>
+                <p>Reporting issues and our safety standards.</p>
+            </a>
+        </div>
 
-    <h2>Safety & Support</h2>
-    <ul>
-      <li>All drivers are verified</li>
-      <li>Live ride tracking available</li>
-      <li>Support available via email and phone</li>
-    </ul>
+        <!-- Popular Questions -->
+        <div style="margin-top: 80px; margin-bottom: 100px;">
+            <h2 style="margin-bottom: 40px; text-align: center;">Popular Questions</h2>
+            <div style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div class="faq-item">
+                    <div class="faq-question">How do I book a Bike Taxi? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer" style="display: block;">Simply open the Ride Andhra app, enter your destination, select the 'Bike' option, and tap 'Book Ride'. A partner will be assigned to you shortly.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What is the 0% commission model for drivers? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Unlike other apps, we don't take a percentage of your fare. Drivers pay a small daily subscription of ₹24 and keep 100% of the ride fare.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How are parcel delivery charges calculated? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Charges are based on the distance between the pickup and drop-off points, as well as the size/weight category of the item.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is my ride insured? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Yes, we provide insurance coverage support for all active rides booked through the Ride Andhra platform for both riders and drivers.</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <h2>Need More Help?</h2>
-    <p>
-      Email us at <strong>help.rideandhra@gmail.com</strong><br />
-      Call us at <strong>+91 83742 77617</strong>
-    </p>
-  </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+                <img src="b13a5657-6fc7-4340-8ec0-a46b5133f6f5 (1).png" alt="Ride Andhra" style="height: 32px; filter: brightness(0) invert(1);">
+                <div style="display: flex; gap: 24px;">
+                    <a href="contact-us.html" style="color: white; text-decoration: none;">Still need help? Contact Us</a>
+                </div>
+                <p style="color: #64748b;">&copy; 2026 Ride Andhra</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

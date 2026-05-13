@@ -1,341 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Driver Partners | Ride Andhra</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-      background: #ffffff;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      padding: 0.5rem 0;
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #2563eb;
-      text-align: center;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      color: #475569;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-      color: white;
-      padding: 3rem 2rem;
-      border-radius: 12px;
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .section {
-      margin-bottom: 3rem;
-    }
-
-    .section-title {
-      font-size: 1.6rem;
-      color: #1e40af;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #e2e8f0;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .benefit-card {
-      background: #f0f9ff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      border-left: 4px solid #0ea5e9;
-    }
-
-    .benefit-icon {
-      font-size: 2rem;
-      color: #0ea5e9;
-      margin-bottom: 1rem;
-    }
-
-    .benefit-card h3 {
-      margin: 0 0 0.5rem 0;
-      color: #1e40af;
-    }
-
-    .eligibility-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .eligibility-list li {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid #e2e8f0;
-      display: flex;
-      align-items: center;
-    }
-
-    .eligibility-list li:last-child {
-      border-bottom: none;
-    }
-
-    .eligibility-icon {
-      color: #10b981;
-      margin-right: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .how-to-join {
-      background: #f1f5f9;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-    }
-
-    .contact-box {
-      background: #dcfce7;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    .contact-box h3 {
-      margin-top: 0;
-      color: #065f46;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    .playstore-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #1a73e8;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 1rem;
-      transition: background 0.3s;
-    }
-
-    .playstore-button:hover {
-      background: #0d62d9;
-    }
-
-    .playstore-icon {
-      font-size: 1.5rem;
-      margin-right: 0.75rem;
-    }
-
-    .disclaimer {
-      background: #fff7ed;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-top: 3rem;
-      border-left: 4px solid #f97316;
-    }
-
-    .disclaimer h3 {
-      color: #ea580c;
-      margin-top: 0;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 1.5rem 1rem;
-      }
-      
-      h1 {
-        font-size: 2rem;
-      }
-      
-      .hero {
-        padding: 2rem 1rem;
-      }
-      
-      .benefits-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .how-to-join, .contact-box {
-        padding: 1.5rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Partners | 0% Commission - Drive with Ride Andhra</title>
+    <meta name="description" content="Join Ride Andhra as a driver partner. Earn 100% of your fares with our 0% commission model. Just ₹24/day subscription. Instant payouts and 24/7 support.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 24px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .comparison-table th {
+            background: var(--gray-50);
+            font-weight: 700;
+        }
+        .highlight-orange {
+            color: var(--primary-orange);
+            font-weight: 700;
+        }
+        .step-card {
+            background: white;
+            padding: 32px;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 32px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-orange);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <a href="index.html" class="back-link">← Back to Ride Andhra</a>
-
-    <h1>Driver Partners</h1>
-    <p class="subtitle">Join Ride Andhra as a driver partner and connect with riders in your area</p>
-
-    <div class="hero">
-      <h2>Drive with Ride Andhra</h2>
-      <p>Connect with riders looking for transportation in your area. Ride Andhra is an information platform that helps riders find drivers and get estimated fare information for their journeys.</p>
-    </div>
-
-    <div class="section">
-      <h2 class="section-title">Why Connect with Ride Andhra?</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <i class="fas fa-percentage"></i>
-          </div>
-          <h3>No Platform Commission</h3>
-          <p>Ride Andhra does not charge commission on your rides. You negotiate fares directly with riders.</p>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="b13a5657-6fc7-4340-8ec0-a46b5133f6f5 (1).png" alt="Ride Andhra">
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Riders</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="#how-it-works">How to Join</a>
+                    <a href="contact-us.html">Contact</a>
+                </div>
+                <div class="cta-group">
+                    <a href="https://play.google.com/store/apps/details?id=com.rideandhra.driverapp" class="btn btn-primary">Download Driver App</a>
+                </div>
+            </nav>
         </div>
-        
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <h3>Flexible Working Hours</h3>
-          <p>Choose when you want to drive. There are no minimum hours or shifts required.</p>
-        </div>
-        
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <h3>Local Rides, Local Support</h3>
-          <p>Connect with riders in your local area. Support available for app-related issues.</p>
-        </div>
-        
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3>Direct Rider Connections</h3>
-          <p>Connect directly with riders and agree on terms that work for both parties.</p>
-        </div>
-      </div>
-    </div>
+    </header>
 
-    <div class="section">
-      <h2 class="section-title">Eligibility Requirements</h2>
-      <ul class="eligibility-list">
-        <li>
-          <span class="eligibility-icon"><i class="fas fa-check-circle"></i></span>
-          <div>
-            <strong>Valid driving license</strong> - Must be valid for the vehicle type you operate
-          </div>
-        </li>
-        <li>
-          <span class="eligibility-icon"><i class="fas fa-check-circle"></i></span>
-          <div>
-            <strong>Vehicle documents</strong> - Registration, insurance, and any required permits
-          </div>
-        </li>
-        <li>
-          <span class="eligibility-icon"><i class="fas fa-check-circle"></i></span>
-          <div>
-            <strong>Smartphone with internet</strong> - Required to use the Ride Andhra Driver App
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2 class="section-title">How to Join?</h2>
-      <div class="how-to-join">
-        <p>To connect with riders through Ride Andhra, download our Driver App from the Play Store:</p>
-        
-        <a href="https://play.google.com/store" class="playstore-button" target="_blank">
-          <span class="playstore-icon"><i class="fab fa-google-play"></i></span>
-          <span>Download on Google Play</span>
-        </a>
-        
-        <p style="margin-top: 2rem;">Or contact us directly for more information:</p>
-      </div>
-      
-      <div class="contact-box">
-        <h3>Contact Our Driver Support Team</h3>
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>Email: help.rideandhra@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>Phone: +91 83742 77617</span>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="commission-badge">FOR DRIVER PARTNERS</span>
+                    <h1>Drive more.<br>Earn more.</h1>
+                    <p>Experience the freedom of <strong>0% Commission</strong>. Keep everything you earn from every ride. No hidden fees, just a simple daily subscription.</p>
+                    
+                    <div style="background: white; padding: 24px; border-radius: 24px; display: inline-block; box-shadow: var(--shadow); margin-bottom: 32px;">
+                        <span style="font-size: 0.9rem; color: var(--gray-600); display: block; margin-bottom: 8px;">Subscription starts at</span>
+                        <span style="font-size: 2.5rem; font-weight: 800; color: var(--primary-orange);">₹24 <small style="font-size: 1rem; font-weight: 400; color: var(--gray-600);">/ day</small></span>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="https://play.google.com/store/apps/details?id=com.rideandhra.driverapp" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem;">Get Started Now</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="b13a5657-6fc7-4340-8ec0-a46b5133f6f5 (2).png" alt="Driver App" class="phone-mockup">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="disclaimer">
-      <h3><i class="fas fa-exclamation-triangle"></i> Important Information for Driver Partners</h3>
-      <p><strong>Payment and Financial Arrangements:</strong> Ride Andhra is an information-only platform that provides estimated fares and connects riders with drivers. We do not process payments, collect fares, or handle any financial transactions between riders and drivers.</p>
-      <p><strong>Direct Negotiation:</strong> All fare agreements, payments, and financial arrangements are made directly between you (the driver) and the rider, outside of the Ride Andhra platform.</p>
-      <p><strong>No Employment Relationship:</strong> Ride Andhra does not employ drivers, provide vehicles, or guarantee any minimum earnings. You operate as an independent service provider.</p>
-      <p><strong>Important Note:</strong> Ride Andhra does not pay money to drivers. Any payments for rides occur directly between riders and drivers. Ride Andhra's role is limited to providing information and connectivity services.</p>
-    </div>
+    <!-- Comparison Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Ride Andhra?</h2>
+                <p>Stop losing your hard-earned money to high commissions.</p>
+            </div>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Other Platforms</th>
+                        <th class="highlight-orange">Ride Andhra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Commission per ride</td>
+                        <td>Up to 30%</td>
+                        <td class="highlight-orange">0%</td>
+                    </tr>
+                    <tr>
+                        <td>Daily Cost</td>
+                        <td>Variable (High)</td>
+                        <td class="highlight-orange">Flat ₹24</td>
+                    </tr>
+                    <tr>
+                        <td>Earnings Payout</td>
+                        <td>Weekly/Monthly</td>
+                        <td class="highlight-orange">Instant</td>
+                    </tr>
+                    <tr>
+                        <td>Freedom to choose</td>
+                        <td>Restricted</td>
+                        <td class="highlight-orange">Full Freedom</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-  </div>
+    <!-- Benefits Section -->
+    <section id="benefits" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Benefits</h2>
+                <p>We've got your back at every turn.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-money-bill-wave icon"></i>
+                    <h3>Instant Payouts</h3>
+                    <p>Get your money in your bank account immediately after the ride is completed. No more waiting.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt icon"></i>
+                    <h3>Insurance Covered</h3>
+                    <p>We provide insurance support for our active driver partners to ensure peace of mind during every trip.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset icon"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is always available to help you with any app or ride-related issues.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line icon"></i>
+                    <h3>High Demand</h3>
+                    <p>Reach thousands of riders across Andhra Pradesh and keep your vehicle moving all day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Get Started</h2>
+                <p>Join our growing community in 3 simple steps.</p>
+            </div>
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Download App</h3>
+                    <p>Get the Ride Andhra Driver app from the Google Play Store and register with your phone number.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Upload Documents</h3>
+                    <p>Submit your Driving License, Vehicle Registration (RC), and Insurance documents for verification.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Start Earning</h3>
+                    <p>Once verified, choose your subscription plan and start accepting ride requests immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="b13a5657-6fc7-4340-8ec0-a46b5133f6f5 (1).png" alt="Ride Andhra" style="height: 40px; margin-bottom: 24px; filter: brightness(0) invert(1);">
+                    <p>Empowering drivers across Andhra Pradesh with a fair, transparent, and high-earning platform.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Rider Home</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#how-it-works">Join Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="help-center.html">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Support</h4>
+                    <p style="margin-bottom: 8px;">help.rideandhra@gmail.com</p>
+                    <p>+91 83742 77617</p>
+                </div>
+            </div>
+            <div style="padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.9rem;">
+                <p>&copy; 2026 Ride Andhra. Empowering the Driver Community.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

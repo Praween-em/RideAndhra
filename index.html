@@ -1,995 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="JUxm9pJVat8uX0BDRCWUyrZSY50xEun56YuBARURPCU" />
-   
-    <title>Ride Andhra | Information & Connectivity Platform</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Ride Andhra | Bike Taxi, Car & Auto Rides in Andhra Pradesh</title>
+    <meta name="description"
+        content="Ride Andhra offers safe bike taxi, car, auto, and parcel delivery services across Andhra Pradesh. 0% commission for drivers. Book your ride now!">
+    <meta name="keywords"
+        content="ride andhra, bike taxi andhra, andhra bike taxi, andhra taxi, auto andhra, bike taxi andhra pradesh, cab andhra pradesh, parcel delivery andhra">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
     <style>
-        :root {
-            --primary-blue: #2563eb;
-            --dark-blue: #1e40af;
-            --light-blue: #dbeafe;
-            --primary-orange: #f97316;
-            --dark-orange: #ea580c;
-            --light-orange: #fed7aa;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --white: #ffffff;
-            --gray-light: #f8fafc;
-            --gray-medium: #e2e8f0;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            z-index: 1000;
-            box-shadow: var(--shadow-light);
-        }
-        
-        .logo {
+        /* Specific page tweaks */
+        .trust-pillar {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-        
-        .logo img {
-            height: 48px;
-        }
-        
-        .logo-text {
-            font-weight: 700;
-            font-size: 1.5rem;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-blue);
-        }
-        
-        .download-btn {
-            background: linear-gradient(90deg, var(--primary-orange), var(--primary-blue));
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
+            gap: 12px;
+            background: var(--gray-50);
+            padding: 16px;
+            border-radius: 16px;
             font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            font-size: 0.9rem;
-        }
-        
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-        
-        /* Hero Section - Zomato Style */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            padding-top: 80px;
-        }
-        
-        .hero-animation {
-            flex: 1;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--white) 50%, var(--primary-orange) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-animation::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
-            background-size: cover;
-        }
-        
-        .animation-container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-    
         }
 
-        dotlottie-wc {
-            width: 100%;
-            height: 100%;
-        }
-        
-        #lottie-container {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
-        }
-        
-        .hero-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 2rem 4rem;
-            background: var(--white);
-        }
-        
-        .hero-logo {
-            width: 150px;
-            margin-bottom: 20px;
-        }
-        
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            color: var(--text-dark);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-        }
-        
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .app-store-btn, .play-store-btn {
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-        
-        .app-store-btn:hover, .play-store-btn:hover {
-            transform: translateY(-5px);
-        }
-        
-        .app-store-btn img, .play-store-btn img {
-            height: 50px;
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-        }
-        
-        .hero-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .stat {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
+        .trust-pillar i {
             color: var(--primary-blue);
-        }
-        
-        .stat-text {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-        
-        /* Important Notice */
-        .important-notice {
-            background: #fff7ed;
-            border: 1px solid #fed7aa;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            font-size: 0.9rem;
-        }
-        
-        .important-notice h4 {
-            color: #ea580c;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-        
-        .notice-link {
-            color: #2563eb;
-            text-decoration: underline;
-            font-weight: 500;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            background-color: var(--gray-light);
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-        
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .feature-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: var(--light-blue);
-            color: var(--primary-blue);
-            font-size: 1.8rem;
-        }
-        
-        .feature-card:nth-child(2) .feature-icon {
-            background: var(--light-orange);
-            color: var(--primary-orange);
-        }
-        
-        .feature-card:nth-child(3) .feature-icon {
-            background: var(--light-blue);
-            color: var(--dark-blue);
-        }
-        
-        .feature-card:nth-child(4) .feature-icon {
-            background: var(--light-orange);
-            color: var(--dark-orange);
-        }
-        
-        .feature-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-        
-        .feature-card p {
-            color: var(--text-light);
-        }
-        
-        /* How It Works */
-        .how-it-works {
-            padding: 6rem 2rem;
-            background: var(--white);
-        }
-        
-        .steps {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .steps::before {
-            content: "";
-            position: absolute;
-            top: 40px;
-            left: 10%;
-            width: 80%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
-            z-index: 1;
-        }
-        
-        .step {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            flex: 1;
-            padding: 0 1rem;
-        }
-        
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
-            box-shadow: var(--shadow);
-            border: 4px solid var(--white);
-        }
-        
-        .step:nth-child(1) .step-number {
-            background: var(--primary-blue);
-        }
-        
-        .step:nth-child(2) .step-number {
-            background: var(--primary-orange);
-        }
-        
-        .step:nth-child(3) .step-number {
-            background: var(--dark-blue);
-        }
-        
-        .step h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-        
-        .step p {
-            color: var(--text-light);
-        }
-        
-        /* Cities Section */
-        .cities {
-            padding: 6rem 2rem;
-            background-color: var(--gray-light);
-        }
-        
-        .cities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .city-card {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: var(--shadow-light);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .city-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-        
-        .city-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-blue);
-        }
-        
-        .city-card h3 {
-            font-size: 1.2rem;
-            color: var(--text-dark);
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 6rem 2rem;
-            background: var(--white);
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .testimonial-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--primary-orange);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--light-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-blue);
-            font-weight: 700;
-        }
-        
-        .author-info h4 {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-        
-        .author-info p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        
-        /* Disclaimer Section */
-        .disclaimer-section {
-            padding: 4rem 2rem;
-            background: #fef3c7;
-            color: #92400e;
-        }
-        
-        .disclaimer-box {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            border-left: 6px solid #f59e0b;
-        }
-        
-        .disclaimer-box h3 {
-            color: #d97706;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-        
-        .disclaimer-box ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .disclaimer-box li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 50%, var(--primary-orange) 100%);
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        .footer-column h3::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--primary-orange);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary-orange);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: #334155;
-            color: white;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        
-        .social-links a:hover {
-            background: var(--primary-orange);
-        }
-        
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid #334155;
-            text-align: center;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero {
-                flex-direction: column;
-            }
-            
-            .hero-content {
-                padding: 3rem 2rem;
-            }
-
-            .animation-container {
-                height: 60vh;
-                width: 90%;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-           
-            .animation-container {
-                height: 50vh;
-                width: 90%;
-            }
-            
-            .dotlottie-wc {
-                width: 100%;
-                height: 100%;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .steps {
-                flex-direction: column;
-                gap: 3rem;
-            }
-            
-            .steps::before {
-                display: none;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .app-store-btn img, .play-store-btn img {
-                height: 45px;
-            }
-            
-            .hero-stats {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            font-size: 1.25rem;
         }
     </style>
-    
-    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
 </head>
-  
+
 <body>
+
     <!-- Header -->
     <header>
-        <div class="logo">
-            <img src="b13a5657-6fc7-4340-8ec0-a46b5133f6f5 (1).png" alt="Ride Andhra">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="b13a5657-6fc7-4340-8ec0-a46b5133f6f5 (1).png" alt="Ride Andhra">
+                </a>
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#rewards">Super Rewards</a>
+                    <a href="driver-partners.html">Drive with Us</a>
+                    <a href="contact-us.html">Contact</a>
+                </div>
+                <div class="cta-group">
+                    <a href="https://play.google.com/store/apps/details?id=com.rideandhra.rider"
+                        class="btn btn-secondary">Rider App</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.rideandhra.driverapp"
+                        class="btn btn-primary">Driver App</a>
+                </div>
+            </nav>
         </div>
-        
-        <nav class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#cities">Cities</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#download">Download</a>
-        </nav>
-        
-        <button class="download-btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.rideandhra', '_blank')">
-            Download App
-        </button>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-animation">
-            <div class="animation-container">
-                <dotlottie-wc src="https://lottie.host/a711cb61-fead-436e-9fd6-8a33791e5ec5/NubdjSyMKJ.lottie" autoplay loop></dotlottie-wc>
-              <h1 style="font-size:1rem ">Get ride information. Connect with drivers.</h1>
-            </div>
-        </div>
-        
-        <div class="hero-content">
-            <div style="display: flex; flex-direction: row; align-items: center;">
-    <h1 style="color:#fe7009; margin: 0; margin-right: 5px;">Ride</h1>
-    <h1 style="color:#2563eb; margin: 0;">Andhra</h1>
-</div>
-            <p>Ride Andhra is an information and connectivity platform that provides ride-related information, route details, and estimated fares. Connect directly with local drivers in Andhra Pradesh.</p>
-            
-          
-            
-            <div class="hero-cta">
-                <a href="https://play.google.com/store/apps/details?id=com.rideandhra" class="play-store-btn" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-                </a>
-            </div>
-            
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">Information</span>
-                    <span class="stat-text">Platform Only</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">No Fees</span>
-                    <span class="stat-text">Zero Commission</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">Direct</span>
-                    <span class="stat-text">Rider-Driver Connection</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="service-badges">
+                        <div class="service-badge">
+                            <div class="icon-box">
+                                <img src="bike_icon.png" alt="Bike" style="width: 32px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fas fa-motorcycle" style="display:none; font-size: 1.2rem;"></i>
+                            </div>
+                            <span>Bike</span>
+                        </div>
+                        <div class="service-badge">
+                            <div class="icon-box">
+                                <img src="bike_lite_icon.png" alt="Bike Lite" style="width: 32px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fas fa-bicycle" style="display:none; font-size: 1.2rem;"></i>
+                            </div>
+                            <span>Lite</span>
+                        </div>
+                        <div class="service-badge">
+                            <div class="icon-box">
+                                <img src="premium_bike.png" alt="Premium" style="width: 32px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fas fa-motorcycle" style="display:none; font-size: 1.2rem; color: var(--primary-orange);"></i>
+                            </div>
+                            <span>Premium</span>
+                        </div>
+                        <div class="service-badge">
+                            <div class="icon-box">
+                                <img src="cab_icon.png" alt="Car" style="width: 32px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fas fa-car" style="display:none; font-size: 1.2rem;"></i>
+                            </div>
+                            <span>Car</span>
+                        </div>
+                        <div class="service-badge">
+                            <div class="icon-box">
+                                <img src="auto_icon.png" alt="Auto" style="width: 32px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fas fa-taxi" style="display:none; font-size: 1.2rem;"></i>
+                            </div>
+                            <span>Auto</span>
+                        </div>
+                        <div class="service-badge">
+                            <div class="icon-box">
+                                <img src="parcel_icon.png" alt="Parcel" style="width: 32px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fas fa-box" style="display:none; font-size: 1.2rem;"></i>
+                            </div>
+                            <span>Parcel</span>
+                        </div>
+                    </div>
+                    <h1>Your trusted ride across Andhra Pradesh</h1>
+                    <p>Fast, reliable, and affordable transportation at your fingertips. From daily commutes to parcel
+                        deliveries, we've got you covered.</p>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="section-header">
-            <h2 class="section-title">What We Provide</h2>
-            <p class="section-subtitle">Ride Andhra is an information and connectivity platform only</p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-route"></i></div>
-                <h3>Route Information</h3>
-                <p>Get detailed pickup and drop-off based route information for your journey planning.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-calculator"></i></div>
-                <h3>Estimated Fares</h3>
-                <p>Distance-based estimated fare calculations to help you plan your transportation budget.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-address-book"></i></div>
-                <h3>Driver Information</h3>
-                <p>Access to driver contact information (where applicable) to facilitate direct connections.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-handshake"></i></div>
-                <h3>Direct Connection</h3>
-                <p>Connect directly with drivers to arrange rides and payments outside our platform.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="section-header">
-            <h2 class="section-title">How Our Platform Works</h2>
-            <p class="section-subtitle">Three simple steps to get ride information and connect with drivers</p>
-        </div>
-        
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Enter Your Details</h3>
-                <p>Input your pickup and drop-off locations to get route information and estimated fares.</p>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Get Information</h3>
-                <p>Receive route details, estimated fares, and driver contact information (where applicable).</p>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Connect Directly</h3>
-                <p>Contact drivers directly to arrange rides. All payments are handled between you and the driver.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Disclaimer Section -->
-    <section class="disclaimer-section">
-        <div class="disclaimer-box">
-            <h3><i class="fas fa-exclamation-triangle"></i> Important Information About Our Service</h3>
-            <p>Ride Andhra operates as an information and connectivity platform only. Please note:</p>
-            <ul>
-                <li>We do not provide transportation services, own vehicles, or employ drivers</li>
-                <li>All fare values shown are estimates only and may vary</li>
-                <li>We do not process payments, collect fares, or maintain wallets</li>
-                <li>Any ride agreement, payment, or dispute is strictly between rider and driver</li>
-                <li>Drivers are independent third parties and we do not supervise or guarantee their behavior</li>
-            </ul>
-            <p>By using our platform, you acknowledge and agree to our <a href="terms-of-service.html" style="color: #2563eb; font-weight: 500;">Terms of Service</a> and <a href="privacy-policy.html" style="color: #2563eb; font-weight: 500;">Privacy Policy</a>.</p>
-        </div>
-    </section>
-
-    <!-- Cities Section -->
-    <section class="cities" id="cities">
-        <div class="section-header">
-            <h2 class="section-title">Available Information for Cities Across Andhra Pradesh</h2>
-            <p class="section-subtitle">Get ride information and connect with drivers in these locations</p>
-        </div>
-        
-        <div class="cities-grid">
-            <div class="city-card">
-                <div class="city-icon"><i class="fas fa-city"></i></div>
-                <h3>Visakhapatnam</h3>
-            </div>
-            <div class="city-card">
-                <div class="city-icon"><i class="fas fa-city"></i></div>
-                <h3>Vijayawada</h3>
-            </div>
-            <div class="city-card">
-                <div class="city-icon"><i class="fas fa-city"></i></div>
-                <h3>Tirupati</h3>
-            </div>
-            <div class="city-card">
-                <div class="city-icon"><i class="fas fa-city"></i></div>
-                <h3>Guntur</h3>
-            </div>
-            <div class="city-card">
-                <div class="city-icon"><i class="fas fa-city"></i></div>
-                <h3>Nellore</h3>
-            </div>
-            <div class="city-card">
-                <div class="city-icon"><i class="fas fa-city"></i></div>
-                <h3>Kakinada</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="section-header">
-            <h2 class="section-title">What Users Say About Our Platform</h2>
-            <p class="section-subtitle">Feedback from users who use our information and connectivity services</p>
-        </div>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p class="testimonial-text">"Ride Andhra provides helpful route information and estimated fares. The platform helps me connect with local drivers directly."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">RK</div>
-                    <div class="author-info">
-                        <h4>Rajesh Kumar</h4>
-                        <p>Information User</p>
+                    <div class="hero-cta" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.rideandhra.rider" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Rider Play Store" style="height: 60px;">
+                        </a>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; width: 100%; max-width: 600px;">
+                            <div class="trust-pillar"><i class="fas fa-shield-alt"></i> Safe Rides</div>
+                            <div class="trust-pillar"><i class="fas fa-map-marker-alt"></i> Live Tracking</div>
+                            <div class="trust-pillar"><i class="fas fa-wallet"></i> Secure Payments</div>
+                            <div class="trust-pillar"><i class="fas fa-headset"></i> 24/7 Support</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <p class="testimonial-text">"As someone who frequently travels, the route information and fare estimates help me plan my transportation budget effectively."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">PS</div>
-                    <div class="author-info">
-                        <h4>Priya S.</h4>
-                        <p>Regular User</p>
-                    </div>
+                <div class="hero-visual">
+                    <!-- Animation Placeholder / Phone Mockup -->
+                    <img src="taxi-app-concept.png" alt="App Preview" class="phone-mockup">
                 </div>
             </div>
-            
-            <div class="testimonial-card">
-                <p class="testimonial-text">"The platform provides useful information that helps me connect with riders directly. No commission fees make it better for everyone."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">AK</div>
-                    <div class="author-info">
-                        <h4>Anil Kumar</h4>
-                        <p>Driver Partner</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Choose the ride that fits your needs and budget</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="bike_lite_icon.png" alt="Bike Lite" class="icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-bicycle icon" style="display:none; font-size: 4rem; margin-bottom: 24px; color: var(--primary-orange);"></i>
+                    <h3>Bike Lite</h3>
+                    <p>Our most affordable ride. Perfect for short distances and budget-friendly commutes.</p>
+                </div>
+                <div class="service-card">
+                    <img src="bike_icon.png" alt="Bike Taxi" class="icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-motorcycle icon" style="display:none; font-size: 4rem; margin-bottom: 24px; color: var(--primary-orange);"></i>
+                    <h3>Bike Taxi</h3>
+                    <p>The standard swift ride. Perfect for beating traffic solo across the city.</p>
+                </div>
+                <div class="service-card">
+                    <img src="premium_bike.png" alt="Premium Bike" class="icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-motorcycle icon" style="display:none; font-size: 4rem; margin-bottom: 24px; color: var(--primary-blue);"></i>
+                    <h3>Premium Bike</h3>
+                    <p>Ride in style with our high-end, powerful bikes. Premium comfort for longer trips.</p>
+                </div>
+                <div class="service-card">
+                    <img src="cab_icon.png" alt="Car Ride" class="icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-car icon" style="display:none; font-size: 4rem; margin-bottom: 24px; color: var(--primary-blue);"></i>
+                    <h3>Car Rides</h3>
+                    <p>Travel in comfort with our range of cars. Ideal for families and business trips.</p>
+                </div>
+                <div class="service-card">
+                    <img src="auto_icon.png" alt="Auto Ride" class="icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-taxi icon" style="display:none; font-size: 4rem; margin-bottom: 24px; color: var(--primary-orange);"></i>
+                    <h3>Auto Rides</h3>
+                    <p>The classic way to navigate the city. Reliable and always available.</p>
+                </div>
+                <div class="service-card">
+                    <img src="parcel_icon.png" alt="Parcel Delivery" class="icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-box icon" style="display:none; font-size: 4rem; margin-bottom: 24px; color: var(--primary-blue);"></i>
+                    <h3>Parcel Delivery</h3>
+                    <p>Send items across the city safely and quickly with our dedicated delivery partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Super Rewards -->
+    <section id="rewards">
+        <div class="rewards-section container">
+            <div class="rewards-grid">
+                <div class="reward-content">
+                    <h2 style="font-size: 3rem; margin-bottom: 24px;">More Rides.<br><span
+                            style="color: var(--primary-orange)">More Rewards.</span></h2>
+                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px;">Earn Super Coins and track your
+                        Super Kilometers to unlock exclusive discounts and milestones.</p>
+                    <div class="reward-item" style="margin-bottom: 32px;">
+                        <div class="reward-icon">🪙</div>
+                        <div>
+                            <h3>Super Coins</h3>
+                            <p>Earn Super Coins on every completed ride. 1 Coin = ₹1 Discount on your next trip.</p>
+                        </div>
+                    </div>
+                    <div class="reward-item">
+                        <div class="reward-icon">🛣️</div>
+                        <div>
+                            <h3>Super Kilometers</h3>
+                            <p>Track your travel milestones and reach new levels to unlock bigger rewards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reward-visual" style="display: flex; align-items: center; justify-content: center;">
+                    <div
+                        style="background: white; color: var(--navy); padding: 32px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); width: 100%; max-width: 350px;">
+                        <h4 style="margin-bottom: 16px;">Your Rewards</h4>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span>Super Coins</span>
+                            <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary-orange);">₹62</span>
+                        </div>
+                        <div
+                            style="height: 8px; background: var(--gray-100); border-radius: 4px; margin-bottom: 12px; overflow: hidden;">
+                            <div style="width: 70%; height: 100%; background: var(--primary-blue);"></div>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--gray-600);">246.5 KM Tracked</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="download">
-        <h2>Get Ride Information Today</h2>
-        <p>Download the Ride Andhra app to access route information, estimated fares, and connect with local drivers in Andhra Pradesh</p>
-        
-        <div class="cta-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.rideandhra" class="play-store-btn" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-            </a>
+    <!-- Driver Section -->
+    <section class="driver-section">
+        <div class="container">
+            <div class="driver-grid">
+                <div class="driver-visual">
+                    <img src="3699591-removebg-preview.png" alt="Driver Partner" style="width: 100%; max-width: 500px;">
+                </div>
+                <div class="driver-content">
+                    <span class="commission-badge">0% COMMISSION</span>
+                    <h2 style="font-size: 3rem; margin-bottom: 24px;">Drive more.<br>Earn more.</h2>
+                    <p style="font-size: 1.2rem; color: var(--gray-600); margin-bottom: 32px;">Tired of giving away 30%
+                        of your earnings? With Ride Andhra, you keep 100% of what you earn. Just a simple ₹24 daily
+                        subscription.</p>
+
+                    <ul style="list-style: none; margin-bottom: 40px;">
+                        <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> 100% of your
+                            earnings are yours
+                        </li>
+                        <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Instant Payouts to
+                            your account
+                        </li>
+                        <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Insurance Support
+                            & 24/7 Assistance
+                        </li>
+                    </ul>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.rideandhra.driverapp"
+                        class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem;">Start Earning Now</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>Ride Andhra</h3>
-                <p>An information and connectivity platform providing ride-related information, route details, and estimated fares for Andhra Pradesh.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="b13a5657-6fc7-4340-8ec0-a46b5133f6f5 (1).png" alt="Ride Andhra"
+                        style="height: 40px; margin-bottom: 24px; filter: brightness(0) invert(1);">
+                    <p>Your trusted ride across Andhra Pradesh. Offering Bike, Car, Auto, and Parcel services with a
+                        commitment to safety and affordability.</p>
+                    <div style="display: flex; gap: 16px; margin-top: 24px;">
+                        <a href="#" style="color: white; font-size: 1.25rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.25rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; font-size: 1.25rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#rewards">Rewards</a></li>
+                        <li><a href="driver-partners.html">For Drivers</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="delete-account.html">Delete Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p style="margin-bottom: 8px;">help.rideandhra@gmail.com</p>
+                    <p>+91 83749 50475</p>
+                    <p style="margin-top: 16px;">Andhra Pradesh, India</p>
                 </div>
             </div>
-            
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#cities">Cities</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#download">Download</a></li>
-                </ul>
+            <div
+                style="padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.9rem;">
+                <p>&copy; 2026 Ride Andhra. All rights reserved.</p>
             </div>
-            
-            <div class="footer-column">
-                <h3>Legal & Support</h3>
-                <ul class="footer-links">
-                    <li><a href="terms-of-service.html">Terms of Service</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="driver-partners.html">Driver Partners</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="delete-account.html">Delete Account</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Contact Information</h3>
-                <ul class="footer-links">
-                    <li><i class="fas fa-envelope"></i> help.rideandhra@gmail.com</li>
-                    <li><i class="fas fa-phone"></i> +91 83749 50475</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Andhra Pradesh, India</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>© 2026 Ride Andhra. An information and connectivity platform only. All rides and payments arranged directly between users and drivers.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Ride Andhra does not provide transportation services, own vehicles, employ drivers, process payments, or collect fares.</p>
         </div>
     </footer>
 
 </body>
+
 </html>

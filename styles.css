@@ -173,12 +173,14 @@ nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 24px;
   color: var(--navy);
+  width: 100%;
 }
 
 .hero-content p {
@@ -186,12 +188,14 @@ nav {
   color: var(--gray-600);
   margin-bottom: 32px;
   max-width: 600px;
+  width: 100%;
 }
 
 .hero-visual {
   position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .hero-cta {
@@ -524,8 +528,20 @@ footer {
     display: none;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    align-items: center;
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
+    width: 100%;
   }
 
   .hero-content p {
